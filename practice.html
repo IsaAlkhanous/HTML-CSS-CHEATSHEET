@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--FAVICON TO ADD LOGO ONTO THE TAB-->
+    <link rel ='icon' type="image/svg" href="images/scp_icon.svg">
+    <title>Learning HTML in full</title>
+</head>
+<body>
+
+    <!--HTML HYPERLINKS-->
+        <!--target specifies where to open the link
+        target = "_blank" opens in a new tab (add rel="noopener noreferrer" for security reasons)
+                 "_self" opens in the same tab (default behavior)
+                 "parent" Open in Parent Frame
+                 "_top" Open in Full Window
+                 "sidebar" Open in 'sidebar' Frame
+
+        title="" gives the link a title
+
+        href =  can be used to access local html file 
+                or a link on the internet
+                or an email using href="mailto:test@fake.com"
+                or a phone number href"tel:+4733378901"
+        -->
+    <a href="https://www.youtube.com/playlist?list=PLZPZq0r_RZOOxqHgOzPyCzIl4AJjXbCYt"
+    target="_blank" rel="noopener noreferrer"
+    title="Goes to HTML learning playlist">
+    Playlist i learned from</a>
+    
+    <br><br>
+    <!-- HTML TEXT FORMATTING-->
+    <pre>
+        use This                | Its position will be the same 
+            for preformatted    | as it is in the code editor
+            text :0                 | (it preserves both    spaces and line breaks)
+    </pre>
+    <p>This is normal text</p>
+        <!--TYPES OF BOLD TEXTS-->
+        <p>This is <b>BOLD</b> text</p>
+        <p>This is <strong>BOLD</strong> text</p>
+    <p>This is <i>italic</i> text</p>
+
+    <p>This is <u>underlined</u> text</p>
+    <p>This is <big>BIG</big> text</p>
+    <p>This is a <sup>SuperScripted</sup> text</p>
+    <p>This is <small>small</small> text</p>
+    <p>This is <sub>subscript</sub> text</p>
+    
+    <!--MARK CAN BE STYLED USED CSS style="background-color=blue"-->
+    <p>This is <mark>marked</mark> text</p>
+    <p>This is <mark style="background-color:red;">marked and styled</mark> text</p>
+    <p>This is <del>Deleted</del> text</p>
+    <p>This is <tt>Monospaced</tt> text</p>
+    
+    <br><br>
+    <!--HTML IMAGES -->
+        <!--It is possible to turn an image into a hyperlink using <a> as seen before this-->
+    <a href="https://www.youtube.com/watch?v=AtPrjYp75uA" target="_blank" rel="noopener noreferrer">    
+    <img src="images/cat2.jpg"
+    alt="This is a cute cat"
+    height="250px"> </a>
+        <!--Types of images possible to attach: JPG,SVG,PNG,GIF-->
+    <img src="images/shower_cat.gif" alt="cat looking at you like wassup dawg">
+    
+    <br><br>
+    <!--Audio in HTML-->
+        <!--You can make it autoplay by adding autoplay in audio "<audio autoplay>"
+            loop: by adding to loop
+            mute it: by adding muted 
+            We can add a fall back by adding the song underneath with another format for example wav-->
+        <audio controls>
+            <source src="audio/miaw miaw miaw song sad (lyrics video visual).mp3" type="audio/mpeg">
+        </audio>
+
+    <br><br>
+    <!--Videos in HTML-->
+    <!-- formats: .mp4 .webm .ogg
+         attributes: controls , muted ,autoplay, loop
+         like audio its possible to add a fallback by adding another format video under-->
+    <video controls muted autoplay width="600px">
+        <source src="video/Learn HTML video in 4 minutes! 🎥.mp4" type="video/mp4">
+        <source src="video/Learn HTML video in 4 minutes! 🎥.ogg" type="video/ogg">
+    </video>
+</body>
+</html>
