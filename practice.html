@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--FAVICON TO ADD LOGO ONTO THE TAB-->
-    <link rel ='icon' type="image/svg" href="images/scp_icon.svg">
-    <title>Learning HTML in full</title>
-</head>
-<body>
+        <!-- Modern websites accept .ico, .png, ,jpeg, .gif, .svg , jpg-->
+        <link rel ='icon' type="image/jpg" href="images/misty.jpg">
+        <title>Learning HTML in full</title>
+    </head>
+    <body>
+        <!--HTML HEADER-->
+        <!--They act as a container to contain introductory content, for example TITLE, navigation bar, logo.. etc-->
+    <header style="background-color:bisque">
+        <h1>Hey, Welcome to the HTML&CSS cheatsheet</h1>
+        <a href="practice.html"> <img src="images/misty.jpg" alt="Misty as a logo" height="50px"> </a>
+        <a href="">Home</a>
+        <a href="">About us</a>
+        <a href="">Products</a>
+        <a href="">Feedback</a>
+    </header>
 
+    <!--HTML main helps organise the main body of the website-->
+    <main>
+    <h2>HyperLinks</h2>
     <!--HTML HYPERLINKS-->
         <!--target specifies where to open the link
         target = "_blank" opens in a new tab (add rel="noopener noreferrer" for security reasons)
@@ -30,16 +44,18 @@
     Playlist i learned from</a>
     
     <br><br>
+    <h2>Text Formatting</h2>
     <!-- HTML TEXT FORMATTING-->
     <pre>
         use This                | Its position will be the same 
             for preformatted    | as it is in the code editor
-            text :0                 | (it preserves both    spaces and line breaks)
+            text :0             | (it preserves both    spaces and line breaks)
     </pre>
     <p>This is normal text</p>
         <!--TYPES OF BOLD TEXTS-->
         <p>This is <b>BOLD</b> text</p>
         <p>This is <strong>BOLD</strong> text</p>
+        
     <p>This is <i>italic</i> text</p>
 
     <p>This is <u>underlined</u> text</p>
@@ -54,7 +70,23 @@
     <p>This is <del>Deleted</del> text</p>
     <p>This is <tt>Monospaced</tt> text</p>
     
+    <h3>Some symbols:</h3>
+    
+    <!-- Some math symbols -->
+    <p>&forall; &part; &exist; &empty; &nabla; &isin; &notin; &ni; &prod; &sum; &plusmn; &divide; &times;</p>
+    
+    <!-- Some Greek Letters -->
+    <p>&Alpha; &Beta; &Gamma; &Delta; &Epsilon; &Zeta; &Pi; &Omega;</p>
+    
+    <!-- Some Other Entities -->
+    <p>&copy; &reg; &euro; &trade; &larr; &uarr; &rarr; &darr; &spades; &clubs; &hearts; &diams;</p>
+    
+    <!-- Fractions and similar -->
+    <p>&frac12; &frac13; &frac14; &frac15; &frac16; &frac34; &frac25; &frac35;</p>
+    
     <br><br>
+    
+    <h2>Images</h2>
     <!--HTML IMAGES -->
         <!--It is possible to turn an image into a hyperlink using <a> as seen before this-->
     <a href="https://www.youtube.com/watch?v=AtPrjYp75uA" target="_blank" rel="noopener noreferrer">    
@@ -65,6 +97,7 @@
     <img src="images/shower_cat.gif" alt="cat looking at you like wassup dawg">
     
     <br><br>
+    <h2>Audio</h2>
     <!--Audio in HTML-->
         <!--You can make it autoplay by adding autoplay in audio "<audio autoplay>"
             loop: by adding to loop
@@ -73,8 +106,9 @@
         <audio controls>
             <source src="audio/miaw miaw miaw song sad (lyrics video visual).mp3" type="audio/mpeg">
         </audio>
+        <br><br>
 
-    <br><br>
+    <h2>videos</h2>
     <!--Videos in HTML-->
     <!-- formats: .mp4 .webm .ogg
          attributes: controls , muted ,autoplay, loop
@@ -83,5 +117,179 @@
         <source src="video/Learn HTML video in 4 minutes! 🎥.mp4" type="video/mp4">
         <source src="video/Learn HTML video in 4 minutes! 🎥.ogg" type="video/ogg">
     </video>
+    <br><br>
+
+    <h2>div & span grouping</h2>
+    <!--GROUP TOGETHER HTML-->
+        <!--<span>: inline container to group elements for styling purposes
+            <div>: block container to group elements for styling purposes-->
+            
+            <h1><span style="background-color:darkcyan">This is a span title</span></h1>
+            <h1><div style="background-color:red">This is a div title</div></h1>
+
+            <p><span style="background-color:rgb(90, 163, 227)">This is a span paragraph</span></p>
+            <p><div style="background-color:rgb(168, 114, 199)">This is a div paragraph</div></p>
+    
+    <h2>Lists</h2>
+    <!--HTML lists-->
+        <!--Unordered List-->
+        <h4>Unordered List "ul"</h4>
+        <ul>
+            <li>I dont</li>
+            <li>care about</li>
+            <li>the order</li>
+            <ul>
+                <li>so i nested</li>
+                <li>another list in it</li>
+            </ul>
+        </ul>
+        <!--Ordered List-->
+        <h4>Ordered List "ol"</h4>
+        <ol>
+            <li>I care about</li>
+            <li>this list's order</li>
+            <li>because i might need it to:</li>
+            <ul>
+                <li>make a todo list</li>
+                <li>Write down steps for a recipe etc.</li>
+            </ul>
+        </ol>
+        <!--Description List-->
+        <h4>Description List</h4>
+        <dl style="border: 2px solid">
+            <dt><b>Cat</b></dt> <!--Description Title-->
+            <dd> <!--Description Details-->
+                The cat, also referred to as domestic cat or house cat, 
+                is a small domesticated carnivorous mammal. It is the only domesticated species of the 
+                family Felidae. Advances in archaeology and genetics have shown that the domestication 
+                of the cat occurred in the Near East around 7500 BC.
+            </dd>
+            <dt><b>Brain rot</b></dt>
+            <dd>
+                an internet term (of course) used to describe the way mindlessly scrolling on social
+                media and watching an endless stream of videos can affect the way we think and speak.
+            </dd>
+        </dl>
+        <br><br>
+
+        <h2>Tables</h2>
+        <!--HTML TABLES-->
+        <table border = 1>
+            <caption><h3>Store Hours</h3></caption>
+            <tr align="center" style="background-color: rgb(127, 181, 201);"><!--Table row-->
+                <th width="80">Sunday</th> <!--table header-->
+                <th width="80">Monday</th>
+                <th width="80">Tuesday</th>
+                <th width="80">Wednesday</th>
+                <th width="80">Thusday</th>
+                <th width="80">Friday</th>
+                <th width="80">Saturday</th>
+            </tr>
+            <tr align="center" style="background-color: aliceblue;">
+                <td>10-4</td>
+                <td>9-5</td>
+                <td>9-5</td>
+                <td>9-5</td>
+                <td>9-5</td>
+                <td>9-5</td>
+                <td>Closed</td>
+            </tr>
+        </table>
+        <br><br>
+
+        <h2>Buttons</h2>
+        <!--HTML&CSS BUTTONS-->
+        <!-- use <a> to make the button goto a hyperlink-->
+        <!--onclick is js, so you can ignore it-->
+        <button onclick="meow()" style="font-size:larger; 
+        background-color:rgb(137, 56, 2);
+        color:rgb(228, 178, 131); 
+        border-radius:10px">MEOW</button>
+        <br><br>
+
+        <!--HTML FORMS-->
+        <h2>Forms</h2>
+        <!-- action="" sends the data to this location (i added google as a default example)
+             methods="" POST used for confidential information
+                        GET is for insensitive data-->
+        
+        <!--Some useful attributes:
+            placeholder=""
+            minlength , maxlength
+            required
+            -->
+        <form action="https://www.google.com" method="POST"> <!-- if you are sending large files like images and folders then add "enctype="multipart/form-data"-->
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Waterbottle2"
+                minlength="6" maxlength="20" required> <br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password"> <br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="example@fake.com"> <br>
+
+            <label for="phone">Phone #:</label>
+            <input type="phone" name="Phone #" id="phone"
+            placeholder="123-45-6789" pattern="{0-9}{3}-{0-9}{2}-{0-9}{4}"> <br>
+            
+            <label for="birthday">Birthday: </label>
+            <input type="date" id="birthday" min="2000-01-01" max="2006-01-01"><br>
+
+            <label for="quantity">Amount: </label>
+            <input type="number" id="quantity"> <br>
+
+            <!--use name to group radio buttons so you can only choose 1-->
+            <label for="cat type">Cat Type: </label>
+            <input type="radio" id="white" value="white" name="cat">
+            <label for="white">White</label>
+
+            <input type="radio" id="    " value="orange" name=cat>
+            <label for="orange">Orange</label> 
+
+            <input type="radio" id="tabby" value="tabby" name="cat">
+            <label for="tabby">Tabby</label><br>
+            
+            <label for="list">Choose your cat name:</label>
+            <select id ="list">
+                <option value="Misty">Misty</option>
+                <option value="Toffee">Toffee</option>
+                <option value="Muffins">Muffins</option>
+                <option value="Crack">Crack</option>
+                <option value="3ABOOD KASHMIRI">3ABOOD KASHMIRI</option>
+            </select><br>
+
+            <label for="checkbox">sell your info to the cat overlord:</label>
+            <input type="checkbox" id="checkbox"><br>
+
+            <label for="comment">Comment:</label>
+            <textarea id="comment" rows="3 " cols="25">Give me some feedback!(except if its bad)</textarea><br>
+
+            <label id="file">Post your cat pics</label>
+            <input type="file" id="file" accept="image/jpg, image/jpeg, image/png, image/gif">
+            <br><input type="reset"><input type="submit">
+        </form>
+        <br><br>
+    
+        <!--CSS CONT ON A DIFF PAGE-->
+        <h2><a href="CSS_practice">CLICK HERE TO GOTO THE CSS FILE</a></h2>
+    </main>
+
+        <!--HTML FOOTER-->
+        <!--Footers are useful for concludary content-->
+        <footer style="background-color: rgb(245, 204, 129);">
+            <hr> <!--Thematic break-->
+            Author: The Jorjan 
+            &copy; copyrights reserved
+            <small><a href="email@gmail.com">TheFake@email.com</small>
+        </footer>
+
+        <!--Ignore this is a script to play meow sound effect using js-->
+        <script>
+            function meow(){
+                var meow = new Audio('audio/meow_soundeffect.mp3')
+                meow.play()
+            }
+        </script>
 </body>
 </html>
