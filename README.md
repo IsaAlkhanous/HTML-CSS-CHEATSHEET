@@ -31,5 +31,3 @@ This project demonstrates a basic HTML structure to help you learn and practice 
 ## Requirements
 To view or modify the project, all you need is a basic text editor and a web browser.
 
-## Author
-The Jorjan (Author and Copyright)
