@@ -1,229 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel ='icon' type="image/jpg" href="images/misty.jpg">
-         <!--There are 3 types of CSS implementation:
-            inline: where we added style="" in the tag
-            internal: adding css by using <style></style> tags
-            Exteral:linking an external css file to html (which is what we will do)-->
-        <link rel="stylesheet" href="styles.css"> <!--use the link tag to link the stylesheet-->
-        <title>CSS-ified the website</title>
-    </head>
-    <body>
-        <header>
-            <h1>Hey, Welcome to the HTML&CSS cheatsheet</h1>
-            <a href="practice.html"> <img src="images/misty.jpg" alt="Misty as a logo" height="50px"> </a>
-            <a href="">Home</a>
-            <a href="">About us</a>
-            <a href="">Products</a>
-            <a href="">Feedback</a>
-        </header>
+<head>
+    <!-- Meta tags for character encoding and responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon to add a logo on the browser tab -->
+    <link rel='icon' type="image/jpg" href="images/misty.jpg">
+    <title>CSS Essentials Cheatsheet</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER SECTION -->
+    <!-- Contains the main heading and navigation menu -->
+    <header>
+        <h1>Welcome to the CSS Essentials Cheatsheet</h1>
+        <!-- Navigation menu linking to different sections -->
+        <nav>
+            <a href="#selectors">Selectors</a>
+            <a href="#box-model">Box Model</a>
+            <a href="#typography">Typography</a>
+            <a href="#colors-units">Colors & Units</a>
+            <a href="#flexbox">Flexbox</a>
+            <a href="#grid">Grid</a>
+            <a href="#transitions-animations">Transitions & Animations</a>
+            <a href="#responsive-design">Responsive Design</a>
+        </nav>
+    </header>
 
-        <main>
-        <h2>HyperLinks</h2>
-        <a href="https://www.youtube.com/playlist?list=PLZPZq0r_RZOOxqHgOzPyCzIl4AJjXbCYt"
-        target="_blank" rel="noopener noreferrer"
-        title="Goes to HTML learning playlist">
-        Playlist I learned from</a>
-        
-        <br><br>
-        <h2>Text Formatting</h2>
-        <pre>
-            use This                | Its position will be the same 
-                for preformatted    | as it is in the code editor
-                text :0             | (it preserves both    spaces and line breaks)
-        </pre>
-        <p>This is normal text</p>
-        <p>This is <b>BOLD</b> text</p>
-        <p>This is <strong>BOLD</strong> text</p>
-        <p>This is <i>italic</i> text</p>
-        <p>This is <u>underlined</u> text</p>
-        <p>This is <big>BIG</big> text</p>
-        <p>This is a <sup>SuperScripted</sup> text</p>
-        <p>This is <small>small</small> text</p>
-        <p>This is <sub>subscript</sub> text</p>
-        <p>This is <mark>marked</mark> text</p>
-        <p>This is <mark>marked and styled</mark> text</p>
-        <p>This is <del>Deleted</del> text</p>
-        <p>This is <tt>Monospaced</tt> text</p>
-        
-        <h3>Some symbols:</h3>
-        
-        <p>&forall; &part; &exist; &empty; &nabla; &isin; &notin; &ni; &prod; &sum; &plusmn; &divide; &times;</p>
-        
-        <p>&Alpha; &Beta; &Gamma; &Delta; &Epsilon; &Zeta; &Pi; &Omega;</p>
-        
-        <p>&copy; &reg; &euro; &trade; &larr; &uarr; &rarr; &darr; &spades; &clubs; &hearts; &diams;</p>
-        
-        <p>&frac12; &frac13; &frac14; &frac15; &frac16; &frac34; &frac25; &frac35;</p>
-        
-        <br><br>
-        
-        <h2>Images</h2>
-        <a href="https://www.youtube.com/watch?v=AtPrjYp75uA" target="_blank" rel="noopener noreferrer">    
-        <img src="images/cat2.jpg" alt="This is a cute cat" height="250px"> </a>
-        <img src="images/shower_cat.gif" alt="cat looking at you like wassup dawg">
-        
-        <br><br>
-        <h2>Audio</h2>
-        <audio controls>
-            <source src="audio/miaw miaw miaw song sad (lyrics video visual).mp3" type="audio/mpeg">
-        </audio>
-        <br><br>
-
-        <h2>videos</h2>
-        <video controls muted autoplay width="600px">
-            <source src="video/Learn HTML video in 4 minutes! 🎥.mp4" type="video/mp4">
-            <source src="video/Learn HTML video in 4 minutes! 🎥.ogg" type="video/ogg">
-        </video>
-        <br><br>
-
-        <h2>div & span grouping</h2>
-                
-        <h1><span>This is a span title</span></h1>
-        <h1><div>This is a div title</div></h1>
-
-        <p><span>This is a span paragraph</span></p>
-        <p><div>This is a div paragraph</div></p>
-        
-        <h2>Lists</h2>
-        <h4>Unordered List "ul"</h4>
-        <ul>
-            <li>I dont</li>
-            <li>care about</li>
-            <li>the order</li>
+    <!-- MAIN CONTENT SECTION -->
+    <main>
+        <!-- SELECTORS SECTION -->
+        <section id="selectors">
+            <h2>CSS Selectors</h2>
+            <p>Selectors are used to select the HTML elements you want to style.</p>
             <ul>
-                <li>so i nested</li>
-                <li>another list in it</li>
+                <li><strong>Universal Selector:</strong> <code>* { ... }</code> (Selects all elements)</li>
+                <li><strong>Element Selector:</strong> <code>p { ... }</code> (Selects all &lt;p&gt; elements)</li>
+                <li><strong>Class Selector:</strong> <code>.classname { ... }</code> (Selects elements with a specific class)</li>
+                <li><strong>ID Selector:</strong> <code>#idname { ... }</code> (Selects an element with a specific ID)</li>
+                <li><strong>Attribute Selector:</strong> <code>a[href] { ... }</code> (Selects &lt;a&gt; elements with an href attribute)</li>
+                <li><strong>Descendant Selector:</strong> <code>ul li { ... }</code> (Selects &lt;li&gt; elements inside &lt;ul&gt;)</li>
+                <li><strong>Child Selector:</strong> <code>div &gt; p { ... }</code> (Selects &lt;p&gt; elements directly under a &lt;div&gt;)</li>
+                <li><strong>Adjacent Sibling Selector:</strong> <code>h2 + p { ... }</code> (Selects &lt;p&gt; elements immediately after &lt;h2&gt;)</li>
             </ul>
-        </ul>
-        <h4>Ordered List "ol"</h4>
-        <ol>
-            <li>I care about</li>
-            <li>this list's order</li>
-            <li>because i might need it to:</li>
+        </section>
+
+        <!-- BOX MODEL SECTION -->
+        <section id="box-model">
+            <h2>CSS Box Model</h2>
+            <p>The box model consists of margins, borders, padding, and the actual content.</p>
+            <!-- Image illustrating the box model -->
+            <img src="images/CssBoxModel.jpg" alt="CSS Box Model Diagram" width="500px">
+            <!-- Code example demonstrating the box model -->
+            <div class="code-example">
+                <!-- CSS code block -->
+                div {
+                    width: 300px;            
+                    padding: 20px;          
+                    border: 5px solid gray;  
+                    margin: 15px;            
+                }
+            </div>
+        </section>
+
+        <!-- TYPOGRAPHY SECTION -->
+        <section id="typography">
+            <h2>Typography</h2>
+            <p>Styling text content using CSS.</p>
             <ul>
-                <li>make a todo list</li>
-                <li>Write down steps for a recipe etc.</li>
+                <li><code>font-family</code>: Sets the font type.</li>
+                <li><code>font-size</code>: Sets the size of the font.</li>
+                <li><code>font-weight</code>: Sets the thickness of the text.</li>
+                <li><code>line-height</code>: Sets the space between lines.</li>
+                <li><code>text-align</code>: Aligns text horizontally.</li>
+                <li><code>text-decoration</code>: Adds decoration like underline.</li>
+                <li><code>text-transform</code>: Transforms text casing.</li>
             </ul>
-        </ol>
-        <h4>Description List</h4>
-        <dl>
-            <dt><b>Cat</b></dt>
-            <dd>
-                The cat, also referred to as domestic cat or house cat, 
-                is a small domesticated carnivorous mammal. It is the only domesticated species of the 
-                family Felidae. Advances in archaeology and genetics have shown that the domestication 
-                of the cat occurred in the Near East around 7500 BC.
-            </dd>
-            <dt><b>Brain rot</b></dt>
-            <dd>
-                an internet term (of course) used to describe the way mindlessly scrolling on social
-                media and watching an endless stream of videos can affect the way we think and speak.
-            </dd>
-        </dl>
-        <br><br>
+            <div class="code-example">
+                <!-- CSS code block for typography -->
+                p {
+                    font-family: 'Arial', sans-serif;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    text-align: justify;
+                }
+            </div>
+        </section>
 
-        <h2>Tables</h2>
-        <table border = 1>
-            <caption><h3>Store Hours</h3></caption>
-            <tr align="center">
-                <th width="80">Sunday</th>
-                <th width="80">Monday</th>
-                <th width="80">Tuesday</th>
-                <th width="80">Wednesday</th>
-                <th width="80">Thusday</th>
-                <th width="80">Friday</th>
-                <th width="80">Saturday</th>
-            </tr>
-            <tr align="center">
-                <td>10-4</td>
-                <td>9-5</td>
-                <td>9-5</td>
-                <td>9-5</td>
-                <td>9-5</td>
-                <td>9-5</td>
-                <td>Closed</td>
-            </tr>
-        </table>
-        <br><br>
+        <!-- COLORS & UNITS SECTION -->
+        <section id="colors-units">
+            <h2>Colors & Units</h2>
+            <h3>Colors</h3>
+            <ul>
+                <li><strong>Named Colors:</strong> <code>color: red;</code></li>
+                <li><strong>Hexadecimal:</strong> <code>color: #ff0000;</code></li>
+                <li><strong>RGB:</strong> <code>color: rgb(255, 0, 0);</code></li>
+                <li><strong>RGBA:</strong> <code>color: rgba(255, 0, 0, 0.5);</code></li>
+                <li><strong>HSL:</strong> <code>color: hsl(0, 100%, 50%);</code></li>
+            </ul>
+            <h3>Units</h3>
+            <ul>
+                <li><strong>Absolute Units:</strong> px, pt, cm, mm, in</li>
+                <li><strong>Relative Units:</strong> em, rem, %, vw, vh</li>
+            </ul>
+        </section>
 
-        <h2>Buttons</h2>
-        <button onclick="meow()">MEOW</button>
-        <br><br>
+        <!-- FLEXBOX SECTION -->
+        <section id="flexbox">
+            <h2>CSS Flexbox</h2>
+            <p>Flexbox is used for flexible layout of elements.</p>
+            <!-- Flex container -->
+            <div class="flex-container">
+                <!-- Flex items -->
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item">Item 2</div>
+                <div class="flex-item">Item 3</div>
+            </div>
+            <div class="code-example">
+                <!-- CSS code block for Flexbox -->
+                /* Flex Container */
+                .flex-container {
+                    display: flex;                     /* Establishes a flex container */
+                    flex-direction: row;               /* Items arranged horizontally */
+                    justify-content: space-around;     /* Even spacing around items */
+                    align-items: center;               /* Items aligned vertically */
+                }
+                /* Flex Items */
+                .flex-item {
+                    background-color: lightcoral;
+                    padding: 20px;
+                    margin: 10px;
+                }
+            </div>
+        </section>
 
-        <h2>Forms</h2>
-        <form action="https://www.google.com" method="POST">
-            <label for="username">Username:</label>
-            <input type="text" id="username" placeholder="Waterbottle2"
-                minlength="6" maxlength="20" required> <br>
+        <!-- GRID SECTION -->
+        <section id="grid">
+            <h2>CSS Grid</h2>
+            <p>CSS Grid is used for two-dimensional layout of elements.</p>
+            <!-- Grid container -->
+            <div class="grid-container">
+                <!-- Grid items -->
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+            <div class="code-example">
+                <!-- CSS code block for Grid -->
+                /* Grid Container */
+                .grid-container {
+                    display: grid;                             /* Establishes a grid container */
+                    grid-template-columns: repeat(3, 1fr);     /* Creates 3 columns */
+                    gap: 10px;                                 /* Gap between grid items */
+                }
+                /* Grid Items */
+                .grid-item {
+                    background-color: lightseagreen;
+                    padding: 20px;
+                }
+            </div>
+        </section>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password"> <br>
+        <!-- TRANSITIONS & ANIMATIONS SECTION -->
+        <section id="transitions-animations">
+            <h2>Transitions & Animations</h2>
+            <h3>Transitions</h3>
+            <p>Smoothly change property values over time.</p>
+            <!-- Transition example -->
+            <div class="transition-example">
+                Hover over me!
+            </div>
+            <div class="code-example">
+                /* Transition Example */
+                .transition-example {
+                    background-color: lightblue;
+                    padding: 20px;
+                    transition: background-color 0.5s;   /* Transition effect */
+                }
+                .transition-example:hover {
+                    background-color: lightsalmon;       /* New color on hover */
+                }
+            </div>
+            <h3>Animations</h3>
+            <p>Create complex animations using keyframes.</p>
+            <!-- Animation example -->
+            <div class="animation-example">
+                Watch me move!
+            </div>
+            <div class="code-example">
+                /* Animation Example */
+                @keyframes move {
+                    from { transform: translateX(0); }
+                    to { transform: translateX(100px); }
+                }
+                .animation-example {
+                    animation: move 2s infinite alternate;
+                }
+            </div>
+        </section>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="example@fake.com"> <br>
-
-            <label for="phone">Phone #:</label>
-            <input type="phone" name="Phone #" id="phone"
-            placeholder="123-45-6789" pattern="{0-9}{3}-{0-9}{2}-{0-9}{4}"> <br>
-            
-            <label for="birthday">Birthday: </label>
-            <input type="date" id="birthday" min="2000-01-01" max="2006-01-01"><br>
-
-            <label>What time specifically...:</label>
-			<input type="time"><br>
-
-            <label for="quantity">Amount: </label>
-            <input type="number" id="quantity"> <br>
-
-            <label for="cat type">Cat Type: </label>
-            <input type="radio" id="white" value="white" name="cat">
-            <label for="white">White</label>
-
-            <input type="radio" id="    " value="orange" name=cat>
-            <label for="orange">Orange</label> 
-
-            <input type="radio" id="tabby" value="tabby" name="cat">
-            <label for="tabby">Tabby</label><br>
-            
-            <label>How useful is this cheatsheet?</label>
-				<br>
-				<em>Meh</em> <input type="range" min="0" max="10"> <em>Superduper</em><br>
-            <label for="list">Choose your cat name:</label>
-            <select id ="list">
-                <option value="Misty">Misty</option>
-                <option value="Toffee">Toffee</option>
-                <option value="Muffins">Muffins</option>
-                <option value="Crack">Crack</option>
-                <option value="3ABOOD KASHMIRI">3ABOOD KASHMIRI</option>
-            </select><br>
-
-            <label for="checkbox">sell your info to the cat overlord:</label>
-            <input type="checkbox" id="checkbox"><br>
-
-            <label for="comment">Comment:</label>
-            <textarea id="comment" rows="3 " cols="25">Give me some feedback!(except if its bad)</textarea><br>
-
-            <label id="file">Post your cat pics</label>
-            <input type="file" id="file" accept="image/jpg, image/jpeg, image/png, image/gif">
-            <br><input type="reset"><input type="submit">
-        </form>
-        <br><br>
-    
-        <h2><a href="HTML_practice.html">CLICK HERE TO GOTO THE HTML FILE</a></h2>
+        <!-- RESPONSIVE DESIGN SECTION -->
+        <section id="responsive-design">
+            <h2>Responsive Design</h2>
+            <p>Ensure your website looks good on all devices using media queries.</p>
+            <div class="code-example">
+                /* Media Query Example */
+                @media (max-width: 600px) {
+                    body {
+                        background-color: lightgray;
+                    }
+                }
+            </div>
+        </section>
     </main>
 
+    <!-- FOOTER SECTION -->
     <footer>
         <hr>
-        Author: The Jorjan 
-        &copy; copyrights reserved
-        <small><a href="email@gmail.com">TheFake@email.com</small>
+        <p>Author: The Jorjan</p>
+        <p>&copy; All rights reserved</p>
+        <p><small><a href="mailto:TheFake@email.com">TheFake@email.com</a></small></p>
     </footer>
 
+    <!-- SCRIPT SECTION -->
+    <!-- Ignore this script -->
     <script>
+        // Function to play a meow sound effect
         function meow(){
             var meow = new Audio('audio/meow_soundeffect.mp3')
             meow.play()

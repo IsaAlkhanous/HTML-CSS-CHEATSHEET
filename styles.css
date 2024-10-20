@@ -1,3 +1,221 @@
+/* CSS Essentials */
+
+/* RESET AND UNIVERSAL SELECTOR */
+/* Resets default styling and ensures consistent rendering */
+* {
+    margin: 0;                       /* Removes default margin */
+    padding: 0;                      /* Removes default padding */
+    box-sizing: border-box;          /* Includes padding and border in total width and height */
+}
+
+/* BODY STYLING */
 body {
-    background-color: rgb(255, 238, 216);
+    font-family: Arial, sans-serif;  /* Sets default font family */
+    line-height: 1.6;                /* Sets default line height */
+    color: #333;                     /* Sets default text color */
+
+}
+
+/* HEADER STYLING */
+header {
+    background-color: rgb(212, 189, 121);        /* Background color of the header */
+    padding: 20px;                   /* Padding inside the header */
+    text-align: center;              /* Centers the header content */
+}
+
+header h1 {
+    margin-bottom: 10px;             /* Space below the main heading */
+}
+
+/* NAVIGATION LINKS STYLING */
+header nav a {
+    margin: 0 10px;                  /* Spacing between navigation links */
+    color: #333;                     /* Text color of the links */
+    text-decoration: none;           /* Removes underline from links */
+}
+
+header nav a:hover {
+    text-decoration: underline;      /* Underline on hover */
+}
+
+/* MAIN CONTENT STYLING */
+main {
+    padding: 20px;                   /* Padding around the main content */
+}
+
+h2 {
+    margin-top: 20px;                /* Space above the heading */
+    margin-bottom: 10px;             /* Space below the heading */
+    color: #444;                     /* Heading text color */
+}
+
+p {
+    margin-bottom: 15px;             /* Space below paragraphs */
+}
+
+/* CODE EXAMPLE STYLING */
+.code-example {
+    background-color: #f4f4f4;       /* Background color of code blocks */
+    padding: 15px;                   /* Padding inside code blocks */
+    font-family: monospace;          /* Monospace font for code */
+    overflow-x: auto;                /* Enables horizontal scrolling */
+    margin-bottom: 20px;             /* Space below code blocks */
+    border-left: 4px solid #ccc;     /* Left border for emphasis */
+}
+
+/* LIST STYLING */
+ul, ol {
+    margin-left: 20px;               /* Indentation for lists */
+    margin-bottom: 15px;             /* Space below lists */
+}
+
+li {
+    margin-bottom: 5px;              /* Space between list items */
+}
+
+/* IMAGE STYLING */
+img {
+    max-width: 100%;                 /* Responsive image width */
+    height: auto;                    /* Maintains aspect ratio */
+    display: block;                  /* Block-level element */
+    margin: 0 auto;                  /* Centers the image */
+}
+
+/* BUTTON STYLING */
+button {
+    font-size: larger;                       /* Increases font size */
+    background-color: rgb(137, 56, 2);       /* Background color */
+    color: rgb(228, 178, 131);               /* Text color */
+    border-radius: 10px;                     /* Rounds the corners */
+    padding: 10px 20px;                      /* Padding inside the button */
+    border: none;                            /* Removes default border */
+    cursor: pointer;                         /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: rgb(150, 60, 10);      /* Changes background on hover */
+}
+
+/* FLEXBOX EXAMPLE STYLING */
+.flex-container {
+    display: flex;                           /* Defines a flex container */
+    flex-direction: row;                     /* Items flow horizontally */
+    justify-content: space-around;           /* Even spacing around items */
+    align-items: center;                     /* Centers items vertically */
+    margin-bottom: 20px;                     /* Space below the container */
+}
+
+.flex-item {
+    background-color: lightcoral;            /* Background color of items */
+    padding: 20px;                           /* Padding inside items */
+    margin: 10px;                            /* Margin around items */
+    flex: 1;                                 /* Items grow equally */
+    text-align: center;                      /* Centers text inside items */
+}
+
+/* GRID EXAMPLE STYLING */
+.grid-container {
+    display: grid;                           /* Defines a grid container */
+    grid-template-columns: repeat(3, 1fr);   /* Three equal columns */
+    gap: 10px;                               /* Gap between grid items */
+    margin-bottom: 20px;                     /* Space below the container */
+}
+
+.grid-item {
+    background-color: rgb(40, 238, 228);         /* Background color of items */
+    padding: 20px;                           /* Padding inside items */
+    text-align: center;                      /* Centers text inside items */
+    color: white;                            /* Text color */
+    font-size: 1.5em;                        /* Increases font size */
+}
+
+/* PSEUDO-CLASSES */
+a:hover {
+    color: red;                              /* Changes link color on hover */
+}
+
+button:active {
+    transform: scale(0.98);                  /* Scales button when clicked */
+}
+
+/* PSEUDO-ELEMENTS */
+p::first-letter {
+    font-size: 2em;                          /* Enlarges the first letter */
+    color: blue;                             /* Colors the first letter */
+}
+
+p::selection {
+    background: yellow;                      /* Highlights text selection */
+}
+
+/* RESPONSIVE DESIGN USING MEDIA QUERIES */
+@media (max-width: 768px) {
+    header nav {
+        display: block;                      /* Stacks navigation links */
+    }
+
+    .flex-container {
+        flex-direction: column;              /* Stacks flex items vertically */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;          /* Single column layout */
+    }
+}
+
+/* CSS VARIABLES FOR THEMING */
+:root {
+    --main-bg-color: #efe5d7;                /* Main background color */
+    --secondary-bg-color: #2ecc71;           /* Secondary color */
+    --text-color: #333;                      /* Default text color */
+    --font-family: Arial, sans-serif;        /* Default font family */
+}
+
+/* APPLYING CSS VARIABLES */
+body {
+    background-color: var(--main-bg-color);  /* Uses the main background color */
+    color: var(--text-color);                /* Uses the default text color */
+    font-family: var(--font-family);         /* Uses the default font family */
+}
+
+/* ANIMATIONS */
+@keyframes move {
+    from {
+        transform: translateX(0);            /* Starting position */
+    }
+    to {
+        transform: translateX(100px);        /* Ending position */
+    }
+}
+
+.animation-example {
+    background-color: lightgoldenrodyellow;  /* Background color */
+    padding: 20px;                           /* Padding inside */
+    animation: move 2s infinite alternate;   /* Applies the animation */
+}
+
+/* TRANSITION EXAMPLE STYLING */
+.transition-example {
+    background-color: lightblue;             /* Initial background color */
+    padding: 20px;                           /* Padding inside */
+    transition: background-color 0.5s;       /* Duration of the transition */
+}
+
+.transition-example:hover {
+    background-color: lightsalmon;           /* New background color on hover */
+}
+
+/* FOOTER STYLING */
+footer {
+    background-color: rgb(245, 204, 129);    /* Background color of footer */
+    padding: 10px;                           /* Padding inside footer */
+    text-align: center;                      /* Centers footer content */
+}
+
+footer hr {
+    margin-bottom: 10px;                     /* Space below the horizontal line */
+}
+
+footer p {
+    margin-bottom: 5px;                      /* Space below paragraphs */
 }
